@@ -50,7 +50,7 @@ src/
 │   └── Note.jsx
 ├── index.js
 └── styles.css
-
+```
 
 
 ---
