@@ -40,15 +40,17 @@ The project is inspired by Google Keep and is part of learning **React state man
 
 ## 📂 Project Structure
 
+```text
 src/
 ├── components/
-│ ├── App.jsx
-│ ├── Header.jsx
-│ ├── Footer.jsx
-│ ├── CreateArea.jsx
-│ └── Note.jsx
+│   ├── App.jsx
+│   ├── Header.jsx
+│   ├── Footer.jsx
+│   ├── CreateArea.jsx
+│   └── Note.jsx
 ├── index.js
 └── styles.css
+
 
 
 ---
