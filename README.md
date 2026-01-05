@@ -40,3 +40,29 @@ The project is inspired by Google Keep and is part of learning **React state man
 
 ## 📂 Project Structure
 
+src/
+├── components/
+│ ├── App.jsx
+│ ├── Header.jsx
+│ ├── Footer.jsx
+│ ├── CreateArea.jsx
+│ └── Note.jsx
+├── index.js
+└── styles.css
+
+
+---
+
+## 📌 Learning Purpose
+
+This project was built as part of a React learning module to strengthen understanding of:
+- State updates
+- Component communication
+- Dynamic UI rendering
+
+---
+
+## 🔗 Author
+
+**Bramjot Singh**  
+GitHub: https://github.com/bramjot14
