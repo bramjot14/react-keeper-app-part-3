@@ -5,17 +5,18 @@ import Note from "./Note";
 import CreateArea from "./CreateArea";
 
 function App() {
-  const [notes, setNotes] = useState([]);
+  const [items, setItems] = useState([]);
+  // Mapping always occur in arrays not objects
 
-  function addNote(newNote) {
-    setNotes(prevNotes => {
-      return [...prevNotes, newNote];
+  function addItem(title, content) {
+    setItems((prevItems) => {
+      return [...prevItems, { title: title, content: content }];
     });
   }
 
-  function deleteNote(id) {
-    setNotes(prevNotes => {
-      return prevNotes.filter((noteItem, index) => {
+  function deleteItem(id) {
+    setItems((prevItems) => {
+      return prevItems.filter((item, index) => {
         return index !== id;
       });
     });
@@ -24,18 +25,18 @@ function App() {
   return (
     <div>
       <Header />
-      <CreateArea onAdd={addNote} />
-      {notes.map((noteItem, index) => {
-        return (
-          <Note
-            key={index}
-            id={index}
-            title={noteItem.title}
-            content={noteItem.content}
-            onDelete={deleteNote}
-          />
-        );
-      })}
+      <CreateArea onAdd={addItem} />
+      {items.map((toDoitem, index) => (
+        <Note
+          key={index}
+          id={index}
+          text={toDoitem}
+          onDelete={deleteItem}
+          title={toDoitem.title}
+          content={toDoitem.content}
+        />
+      ))}
+
       <Footer />
     </div>
   );
