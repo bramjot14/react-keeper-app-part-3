@@ -2,22 +2,24 @@
 
 Completed:
 - Built a Keeper (Notes) App using React
-- Managed a list of notes using `useState`
-- Added new notes dynamically through controlled inputs
-- Passed data between components using props
-- Implemented delete functionality using note IDs
-- Used `map()` to render multiple components
-- Practiced immutable state updates
-- Learned when to use the spread operator while updating array state
-- Understood that array methods like filter() return a new array, so extra spreading is unnecessary
+- Managed a list of notes using useState as an array of objects
+- Added new notes dynamically by appending objects ({ title, content }) to array state
+- Understood that prevState (prevItems) always represents the previous array, not the object being added
+- Learned that React does not infer types inside arrays — the developer defines the data shape
+- Understood that array methods like map(), filter(), and slice() work on arrays, not on objects
+- Learned that objects must be accessed via properties, while array methods operate on the array itself
+- Passed data and handler functions between components using props
+- Implemented delete functionality using note IDs and filter()
+- Used map() to render multiple note components
+- Practiced immutable state updates using the spread operator
+- Learned when the spread operator is required vs unnecessary
 
 Rule of Thumb:
+Array methods that return a new array → no spread needed
+- filter(), map(), slice()
 
-Array methods that return a new array → no spread needed such as-
-filter(), map(), slice()
-
-When manually building a new array → use spread such as-
-add, insert
+When manually building a new array → use spread
+- add, insert, append ([...prevItems, newItem])
 
 Key Takeaway:
-Managing arrays in React state requires immutable updates. Lifting state up and passing handler functions through props allows components to communicate effectively and keep the UI in sync.
+Mapping, filtering, or slicing happens on arrays, not on individual objects inside them. React state simply stores data; understanding the difference between array operations and object access is essential for predictable state updates and clean component rendering.
