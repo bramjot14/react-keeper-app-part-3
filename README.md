@@ -25,6 +25,8 @@ The project is inspired by Google Keep and is part of learning **React state man
 - HTML
 - CSS
 
+----
+
 ## Preview 📷
 
 <img width="1252" height="717" alt="image" src="https://github.com/user-attachments/assets/10c8bb26-cb84-4a18-bd12-a78814872807" />
